@@ -1,0 +1,10 @@
+body{
+  background-color: rgb(18, 18, 18) !important;
+  color: rgb(253, 255, 241) !important;
+  font-family: "Russo One", sans-serif !important;
+  font-style: normal !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

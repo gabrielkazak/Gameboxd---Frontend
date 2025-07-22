@@ -1,0 +1,49 @@
+/* GamesGrid.css */
+
+.screen-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 5;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.screen-overlay.visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.games-grid-container {
+  margin-bottom: 150px;
+  position: relative;
+  /* Ensure the grid container spans the full width and handles its own padding */
+  width: 100%;
+  box-sizing: border-box; /* Include padding in the width */
+  padding: 0 10px; /* Add some default padding on the sides for all screen sizes */
+
+  /* For desktop, you'd likely keep Bootstrap's d-flex, flex-wrap, justify-content-center, gap-3 */
+  /* If these cause issues on desktop too, you might need to manage them here */
+}
+
+/* --- Mobile Styles for the Grid Container --- */
+@media (max-width: 768px) {
+  .games-grid-container {
+    /* Override Bootstrap's default flexbox settings for mobile */
+    display: flex; /* Ensure it's a flex container */
+    flex-direction: column; /* Stack cards vertically */
+    flex-wrap: nowrap; /* Prevent wrapping to simplify layout calculation */
+    justify-content: flex-start; /* Let child margins handle horizontal centering */
+    align-items: center !important; /* This is the key to horizontally center direct children */
+    gap: 0 !important; /* Crucial: Remove Bootstrap's gap on mobile to prevent overflow */
+    padding: 0 15px !important; /* Ensure adequate side padding for the entire grid */
+    overflow-x: hidden !important; /* Absolutely prevent horizontal scrolling */
+    width: 100% !important; /* Ensure it always takes full width on mobile */
+  }
+}

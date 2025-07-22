@@ -1,0 +1,168 @@
+/* GamePage.css */
+
+.main-content {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: row;
+ 
+  padding: 2rem;
+  background-color: #111;
+  color: #fff;
+}
+
+.left-container {
+  flex: 2;
+  align-items: flex-start;
+}
+
+.right-container {
+  flex: 1;
+}
+
+.image-gamePage {
+  width: 75%;
+  border-radius: 8px;
+  object-fit: cover;
+  max-height: 400px;
+}
+
+.platform-icon, .sega-icon, .iphone-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.rating {
+  font-weight: bold;
+}
+
+.screenshots-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.screenshot-img {
+  width: 75%;
+  border-radius: 6px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.screenshot-img:hover {
+  transform: scale(1.3);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.wishlist-btn:hover{
+  border: 1px solid rgb(7, 105, 0) !important;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+    padding: 1rem;
+    margin-top: 250px;
+    align-items: center;
+  }
+
+  .left-container, .right-container {
+    flex: 1;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .image-gamePage {
+    width: 100%;
+    max-height: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .game-name,
+  .text-secondary,
+  .bottom-main p {
+    text-align: center !important;
+  }
+
+  .bottom-main > .d-flex.align-items-center.justify-content-between,
+  .bottom-main > .d-flex.justify-content-between {
+    flex-direction: column !important;
+    gap: 15px;
+    align-items: center !important;
+    width: 100%;
+  }
+
+  .bottom-main {
+    align-items: center !important;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .screenshots-grid {
+    flex-direction: row;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .screenshot-img {
+    width: 100%;
+    max-width: 200px;
+    flex-shrink: 0;
+  }
+
+  .game-name {
+    font-size: 2.5rem;
+  }
+
+  .text-secondary, p {
+    font-size: 0.9rem;
+  }
+
+  .add-list, .wishlist-btn {
+    width: 80%;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .bottom-main > .d-flex.align-items-center.justify-content-between:last-of-type {
+    flex-direction: column !important;
+    gap: 10px;
+    width: 100%;
+    align-items: center !important;
+  }
+
+  .platforms {
+    flex-wrap: wrap;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .platforms > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .game-description, .game-tags {
+    width: 100%;
+  }
+
+  .game-description p {
+    text-align: justify;
+  }
+
+  .game-tags .d-flex {
+    justify-content: center !important;
+    flex-wrap: wrap;
+  }
+}

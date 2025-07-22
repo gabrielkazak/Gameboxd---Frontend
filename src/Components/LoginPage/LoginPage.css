@@ -1,0 +1,37 @@
+.form-button{
+    border: none;
+    background-color: black;
+    color: white;
+    font-size: 24px;
+    margin: 0 6px;
+    border-radius: 8px;
+    padding: 12px;
+}
+
+.form-img{
+    width: 16px;
+    height: 18px;
+}
+
+input{
+    background-color: rgb(41, 41, 41);
+    font-size: 20px;
+    color: white;
+    width: 300px;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    padding-left: 15px;
+}
+
+.disabled{
+    background-color: rgb(76, 76, 76);
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* 100% da altura da tela */
+}

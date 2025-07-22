@@ -1,0 +1,100 @@
+.add-list-container {
+  position: fixed; 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10000;
+  background-color: #1c1c1e;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.05);
+  width: 90%;
+  max-width: 600px;
+  color: white;
+}
+
+
+.add-list-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #fff;
+}
+
+.form-infos {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.form-label {
+  color: #aaa;
+  font-size: 1rem;
+}
+
+.game-title {
+  color: #f5f5f5;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.rating-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.comment {
+  width: 100%;
+  min-height: 120px;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: #2d2d2d;
+  color: white;
+  border: 1px solid #444;
+  resize: none;
+  transition: border 0.3s ease;
+}
+
+.comment:focus {
+  border: 1px solid #fff;
+  outline: none;
+}
+
+.add-list-btn {
+  background-color: #444;
+  color: white;
+  padding: 0.75rem;
+  margin-top: 1rem;
+  width: 100%;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.add-list-btn:hover {
+  background-color: transparent;
+  border: 1px solid white;
+}
+
+.overlay{
+  width:ZZZ;
+  height: 100%;
+  position: absolute;
+  background-color: #000000b6;
+  z-index: 9999;
+}
+
+.close-button:hover{
+  color: red;
+  cursor: pointer;
+}
+
+.invisible{
+  display: none;
+}
+
+.visible{
+  display: block;
+}

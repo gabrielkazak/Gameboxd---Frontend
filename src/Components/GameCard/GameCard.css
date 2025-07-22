@@ -1,0 +1,259 @@
+.Game-card-wrapper {
+  position: relative;
+  width: 325px;
+  height: 350px;
+  overflow: visible;
+}
+
+.Game-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #222;
+  border-radius: 8px;
+  overflow: visible;
+  color: white;
+  box-shadow: 0 0 8px rgba(0,0,0,0.3);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1;
+  transform-origin: center center;
+  will-change: transform;
+}
+
+.Game-card:hover {
+  transform: scale(1.15);
+  z-index: 999;
+  height: fit-content;
+}
+
+.main-image {
+  z-index: 2;
+}
+
+.card-image {
+  width: 100%;
+  height: 200px !important;
+  object-fit:cover;
+  border-radius: 4px;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.screenshots-carousel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: none;
+}
+
+.Game-card:hover .main-image {
+  opacity: 0;
+}
+
+.Game-card:hover .screenshots-carousel {
+  z-index: 10;
+  display: block;
+}
+
+.Game-card:hover .add-list{
+  z-index: 9999;
+}
+
+.infos {
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.game-name {
+  font-size: 18px;
+}
+
+.platform-icon{
+  width: 20px;
+  height: 20px;
+  margin-left: 4px;
+}
+
+.sega-icon{
+  width: 45px;
+  height: 15px;
+  margin-left: 4px;
+}
+
+.iphone-icon{
+  width: 12px;
+  height: 20px;
+  margin-left: 8px;
+}
+
+.add-list{
+  position: relative;
+  background-color: #2d2d2d !important;
+  color: white !important;
+  transition: 1s ease !important;
+  border: 1px solid #2d2d2d;
+}
+
+.add-list:hover{
+  background-color: transparent !important;
+  border: 1px solid #ffffff !important;
+}
+
+.image-disabled{
+  display: none;
+}
+
+.hide-info{
+  display: none;
+  transition: 0.5s ease;
+}
+
+.Game-card:hover .hide-info{
+  display: block;
+}
+
+.info-box{
+  background-color: white !important;
+  color: black !important;
+  width: fit-content;
+  font-size: 12px;
+  padding: 2px 5px;
+  border-radius: 3px;
+  z-index: 999;
+}
+
+.info-box:hover{
+  background-color: transparent !important;
+  color: white !important;
+}
+
+.wishlist{
+  display: none !important;
+}
+
+.Game-card:hover .wishlist{
+  display: block !important;
+  border: 1px solid rgb(7, 105, 0);
+}
+
+.remove{
+  border: 1px solid rgb(105, 0, 0) !important;
+}
+
+.hide{
+  display: none;
+}
+.botoes {
+  width: 100%;
+  padding: 0.2rem;
+  margin-top: auto;
+}
+
+@media (max-width: 768px) {
+
+  .Game-card-wrapper {
+    width: 90%;
+    max-width: 300px;
+    height: auto !important;
+    aspect-ratio: 1 / 1.7;
+    margin: 0 !important;
+    box-sizing: border-box;
+    overflow: hidden !important;
+  }
+
+  .Game-card {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    z-index: auto !important;
+    transform: none !important;
+    height: 100% !important;
+    min-height: unset !important;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2) !important;
+    overflow: hidden !important;
+  }
+
+  .Game-card .main-image {
+    opacity: 1 !important;
+  }
+
+  .Game-card .screenshots-carousel {
+    display: none !important;
+  }
+
+  .Game-card .hide-info {
+    display: block !important;
+  }
+
+  .Game-card .add-list,
+  .Game-card .wishlist {
+    display: block !important;
+    z-index: auto !important;
+    width: 90% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-top: 8px !important;
+    font-size: 0.9rem !important;
+  }
+
+  .platform-icon {
+    width: 18px !important;
+    height: 18px !important;
+    margin-left: 2px !important;
+  }
+
+  .sega-icon {
+    width: 35px !important;
+    height: 12px !important;
+    margin-left: 2px !important;
+  }
+
+  .iphone-icon {
+    width: 10px !important;
+    height: 18px !important;
+    margin-left: 5px !important;
+  }
+
+  .game-name {
+    font-size: 1.1rem !important;
+    text-align: center !important;
+    margin-bottom: 5px !important;
+  }
+
+  .infos {
+    padding: 0.75rem !important;
+    height: auto !important;
+    justify-content: flex-start !important;
+    gap: 5px !important;
+  }
+
+  .infos .platforms {
+    margin-top: 5px !important;
+  }
+
+  .infos p {
+    margin-bottom: 3px !important;
+  }
+
+  .info-box {
+    margin: 3px auto !important;
+  }
+
+  .botoes {
+    padding: 0.5rem 0 !important;
+    margin-top: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 8px !important;
+  }
+}

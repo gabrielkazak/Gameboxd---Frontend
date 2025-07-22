@@ -1,0 +1,26 @@
+.star-rating {
+  display: flex;
+  justify-content: center; /* Adjust as needed */
+  align-items: center;
+}
+
+.star-rating button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0 5px; /* Adjust spacing between stars */
+}
+
+.star-rating .star {
+  font-size: 40px; /* Adjust star size */
+  transition: color 0.2s ease-in-out;
+}
+
+.star-rating .on .star {
+  color: #ffffff; /* Gold color for selected/hovered stars */
+}
+
+.star-rating .off .star {
+  color: #262626; /* Grey color for unselected stars */
+}
