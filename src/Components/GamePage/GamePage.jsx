@@ -20,6 +20,7 @@ const GamePage = () => {
 
   const apiUrl = import.meta.env.VITE_API_RAW;
   const apiKey = import.meta.env.VITE_API_KEY;
+  //const backendApi = import.meta.env.VITE_API_URL;
   const [game, setGame] = useState(null);
   const [name, setName] = useState('');
   const [userId, setId] = useState('');
@@ -153,7 +154,7 @@ const GamePage = () => {
     if (!userId || !token) return
     
     try {
-      const response = await fetch('/api/wishlist/add', {
+      const response = await fetch(`/api/wishlist/add`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

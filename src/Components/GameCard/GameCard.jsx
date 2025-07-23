@@ -125,7 +125,7 @@ const GameCard = ({ id, imageUrl, gameName, platforms, screenshoots, genre, date
     if (!userId || !token) return
     
     try {
-      const response = await fetch('/api/wishlist/add', {
+      const response = await fetch(`/api/wishlist/add`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

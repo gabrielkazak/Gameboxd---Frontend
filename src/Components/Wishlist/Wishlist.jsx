@@ -8,6 +8,7 @@ const Wishlist = () => {
 
   const apiUrl = import.meta.env.VITE_API_RAW;
   const apiKey = import.meta.env.VITE_API_KEY;
+  //const backendApi = import.meta.env.VITE_API_URL;
 
   const navigate = useNavigate()
 
