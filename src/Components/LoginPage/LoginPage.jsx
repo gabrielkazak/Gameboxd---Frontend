@@ -58,7 +58,7 @@ const LoginPage = () => {
 
       if (response.ok) {
         localStorage.setItem('id', result.user.id);
-        localStorage.setItem('nome', result.user.name);
+        localStorage.setItem('name', result.user.name);
         localStorage.setItem('token', result.user.accessToken);
         window.location.href = '/dashboard';
       } else {
